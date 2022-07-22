@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <title>Веб-студия</title>
 </head>
-<body>
+<body data-page>
     <!--шапка сайта-->
     <header class="header">
         <div class="header-container container">
@@ -54,11 +54,12 @@
     <div class="container">
     <h1 class="hero-title">
         Эффективные решения для вашего бизнеса</h1>
-    <button type="button" class="hero-button">Заказать услугу</button>
 
-<div class="backdrop">
+    <button type="button" class="hero-button"data-modal-open>Заказать услугу</button>
+
+<div class="backdrop is-hidden"data-modal>
   <div class="modal">
-    <button class="modal-btn">
+    <button class="modal-btn"data-modal-close>
       <svg class="modal-btn-icon" width="18px" height="18px">
         <use href="./images/icons.svg#icon-iconx"></use>
       </svg>
