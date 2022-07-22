@@ -29,6 +29,7 @@
   --hero-shadow: rgba(47, 48, 58, 0.4);
   --social-icon: rgba(175, 177, 184, 1);
   --footer-icon: rgba(255, 255, 255, 0.1);
+  --bgcolor-wdtext: rgba(47, 48, 58, 0.8);
 }
 
 
@@ -169,7 +170,7 @@ var(--color-border-header);
 
 .nav-link.active-page::after {
   position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 	content: "";
 	width: 100%;
@@ -329,6 +330,34 @@ padding-top: 0;
 .we-do-list {
   --card-item: 3;
 }
+
+.we-do-item {
+  position: relative;
+}
+.we-do-text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: var(--bgcolor-wdtext);
+}
+.we-do-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+
 .team {
     background-color: var(--light-gray-backg);
 }
