@@ -277,7 +277,7 @@ var(--color-border-header);
 padding: 6px 22px;
 
 transition-property: color background-color var(--blue-logo-color), 
-color var(--white-color);
+color var(--white-color),box-shadow var(--button-shadow);
 transition-duration: 250ms;
 transition-timing-function: var(--cubic-bezier);
 transition-delay: 0s;
@@ -451,8 +451,17 @@ margin-bottom: 4px;
     flex-basis: calc(100% / var(--card-item) - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
-    
-}
+    }
+
+    .overlay {
+background-color: ;
+    }
+
+    .overlay-text {
+color: var(--white-color);
+text-align: center;
+    }
+
 
 /* кнопки портфолио */
 .select-list {
@@ -641,6 +650,11 @@ align-items: baseline;
 width: 100%;
    height: 100%;
    background-color: var(--modal-background);
+   
+   opacity: 1;
+   visibility: visible;
+   pointer-events: initial;
+   transition: opacity 500ms ease-out, visibility 500ms ease-out;
 }
 
 .modal {
