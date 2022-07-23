@@ -556,14 +556,14 @@ margin-bottom: 4px;
 
 .address-link {
     color: var(--footer-primary-color);
-    transition-property: var(--blue-logo-color),var(--white-color);
+    transition-property: color var(--footer-primary-color) ,color var(--blue-logo-color);
 transition-duration: 250ms;
 transition-timing-function: var(--cubic-bezier);
 }
 
 .street {
     color: var(--white-color);
-    transition-property: var(--blue-logo-color),var(--white-color);
+    transition-property: var(--white-color),var(--blue-logo-color);
 transition-duration: 250ms;
 transition-timing-function: var(--cubic-bezier);
 }
@@ -606,9 +606,9 @@ transition-timing-function: var(--cubic-bezier);
     background-color: var(--footer-icon);
     width: 44px;
     height: 44px;
-    transition-property: var(--blue-logo-color),var(--white-color);
-transition-duration: 250ms;
-transition-timing-function: var(--cubic-bezier);
+    transition-property: var(--blue-logo-color) ,var(--white-color);
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
   }
 
   .footer
