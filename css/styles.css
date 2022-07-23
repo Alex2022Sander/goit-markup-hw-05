@@ -31,6 +31,8 @@
   --footer-icon: rgba(255, 255, 255, 0.1);
   --bgcolor-wdtext: rgba(47, 48, 58, 0.8);
   --modal-background: rgba(0, 0, 0, 0.2);
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -168,6 +170,7 @@ var(--color-border-header);
   align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: color 250ms;
 }
 .nav-link.active-page {
   position: relative;
@@ -272,6 +275,12 @@ var(--color-border-header);
     line-height: 1.6;
     border-radius: 4px;
 padding: 6px 22px;
+
+transition-property: color background-color var(--blue-logo-color), 
+color var(--white-color);
+transition-duration: 250ms;
+transition-timing-function: var(--cubic-bezier);
+transition-delay: 0s;
 }
 
 .select-button:hover,
@@ -435,6 +444,7 @@ margin-bottom: 4px;
   padding: 20px 24px;
   border: 1px solid var(--grey-card-content);
   border-top: none;
+  
 }
 
 .card-item {
@@ -496,12 +506,18 @@ margin-bottom: 4px;
 
 .address-link {
     color: var(--footer-primary-color);
+    transition-property: var(--blue-logo-color),var(--white-color);
+transition-duration: 250ms;
+transition-timing-function: var(--cubic-bezier);
 }
 
 .street {
     color: var(--white-color);
+    transition-property: var(--blue-logo-color),var(--white-color);
+transition-duration: 250ms;
+transition-timing-function: var(--cubic-bezier);
 }
-.address .link:hover
+.address .link:hover,
 .address .link:focus{
     color: var(--blue-logo-color);
 }
@@ -540,16 +556,20 @@ margin-bottom: 4px;
     background-color: var(--footer-icon);
     width: 44px;
     height: 44px;
-    
+    transition-property: var(--blue-logo-color),var(--white-color);
+transition-duration: 250ms;
+transition-timing-function: var(--cubic-bezier);
   }
 
   .footer
   .social-icon {
     fill: var(--white-color);
+    
   }
   
   .social-icon {
     fill: var(--social-icon);
+    
   }
   
   .social-link-icon:hover .social-icon,
@@ -577,6 +597,9 @@ margin-bottom: 4px;
     border: 1px solid var(--social-icon);
     fill: var(--social-icon);
     border-radius: 4px;
+    transition-property: var(--blue-logo-color),var(--white-color);
+transition-duration: 250ms;
+transition-timing-function: var(--cubic-bezier);
   }
   .clients-link:hover,
 .clients-link:focus {
@@ -628,7 +651,7 @@ align-items: baseline;
   position: relative;
   width: 528px;
 height: 581px;
-background-color: #ffffff;
+background-color: var(--white-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
